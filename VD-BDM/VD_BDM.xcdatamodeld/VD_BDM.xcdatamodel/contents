@@ -1,4 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20A5395g" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Anime" representedClassName="Anime" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary"/>
+        <attribute name="note" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="titre" optional="YES" attributeType="String"/>
+        <attribute name="vuLe" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="imageAnime" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImageAnime" inverseName="anime" inverseEntity="ImageAnime"/>
+        <relationship name="platforms" optional="YES" toMany="YES" minCount="1" maxCount="4" deletionRule="Nullify" destinationEntity="StreamingPlarform" inverseName="animes" inverseEntity="StreamingPlarform"/>
+    </entity>
+    <entity name="ImageAnime" representedClassName="ImageAnime" syncable="YES" codeGenerationType="class">
+        <attribute name="dateCrea" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="imageData" optional="YES" attributeType="Binary"/>
+        <relationship name="anime" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Anime" inverseName="imageAnime" inverseEntity="Anime"/>
+    </entity>
+    <entity name="StreamingPlarform" representedClassName="StreamingPlarform" syncable="YES" codeGenerationType="class">
+        <attribute name="nom" optional="YES" attributeType="String"/>
+        <relationship name="animes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Anime" inverseName="platforms" inverseEntity="Anime"/>
+    </entity>
+    <elements>
+        <element name="Anime" positionX="-413.4136352539062" positionY="-120.9076538085938" width="128" height="134"/>
+        <element name="ImageAnime" positionX="-36" positionY="9" width="128" height="88"/>
+        <element name="StreamingPlarform" positionX="-124.8822021484375" positionY="-131.2565307617188" width="133.6285400390625" height="59"/>
+    </elements>
 </model>
