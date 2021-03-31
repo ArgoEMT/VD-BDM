@@ -164,7 +164,7 @@
                     <connections>
                         <outlet property="datePicker" destination="Brs-eb-frU" id="vHw-kM-xSo"/>
                         <outlet property="noteTextField" destination="fHJ-vM-Adf" id="2bK-3k-Gk1"/>
-                        <outlet property="statusPickerView" destination="9R2-vg-3MX" id="wOF-ba-PwN"/>
+                        <outlet property="statusPicker" destination="9R2-vg-3MX" id="wOF-ba-PwN"/>
                         <outlet property="titreTextField" destination="RUP-Zu-Ztl" id="62F-wJ-d6H"/>
                     </connections>
                 </viewController>
